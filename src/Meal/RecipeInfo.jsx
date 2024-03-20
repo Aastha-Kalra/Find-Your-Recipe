@@ -20,7 +20,7 @@ const RecipeInfo = () => {
   }
 
   return (
-    <div className="bg-purple-400 p-6 rounded cursor-pointer h-full">
+    <div className="bg-purple-400 p-2 rounded cursor-pointer h-full">
       {!item ? (
         ""
       ) : (
@@ -37,13 +37,13 @@ const RecipeInfo = () => {
           />
 
          </div>
-          <div className="flex justify-center items-center gap-5 w-full">
+          <div className="flex md:flex-row flex-col justify-center items-center gap-5 w-full">
             <div className="w-full">
               <div className="text-4xl font-bold p-2 text-center text-purple-950">
                 Recipe
               </div>
 
-              <div className="text-2xl w-full bg-purple-950 p-10 hover:scale-95 transition-all ease-in duration-500">
+              <div className="text-2xl w-full bg-purple-950 p-3 hover:scale-95 transition-all text-justify ease-in duration-500">
                 {item.strInstructions}
               </div>
             </div>
