@@ -13,7 +13,6 @@ const Meal = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.meals);
         setItem(data.meals);
         setShow(true);
       });
@@ -32,7 +31,7 @@ const Meal = () => {
   }
   return (
     <div className="bg-black h-full text-white flex items-center flex-col gap-5  p-2 pb-10">
-      <div className="text-4xl font-bold">Search Your Food Recipe</div>
+      <div className=" text-2xl sm:text-4xl font-bold p-4 animate-bounce ">Search Your Food Recipe</div>
 
       <div>
         <input
@@ -44,7 +43,7 @@ const Meal = () => {
         />
       </div>
 
-      <div className="grid grid-cols-4 gap-10 my-10 px-14">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 my-10 px-10">
         {show ? <MealItem data={item} /> : (
           <div className="text-5xl font-bold">
             Not Found
